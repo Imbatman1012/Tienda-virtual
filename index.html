@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Tienda</title>
+</head>
+<body>
+
+	<h1 align="center">Price of persias' shop</h1>
+
+	<p align="center">En esta pagina puedes comprar productos de la famosa franquisia PRINCIPE DE PERSIA</p>
+	<div class="registro">
+		<h1>Registro</h1>
+		<form>
+			<h4>Nombre:  <input type="text" id="nom"></h4>
+			<h4>Apellido: <input type="text" id="ape"></h4>
+			<h4>Email:    <input type="text" id="email"></h4>
+			<h4>Celular:  <input type="text" id="cel"></h4>
+			<!-- <p>Nombre: <input type="text" id="nom" value="mi Nombre"></p>
+			<p>Apellido: <input type="text" id="ape" value="mi Apellido"></p>
+			<p>Email: <input type="text" id="email" value="mi Email"></p>
+			<p>Celular: <input type="text" id="cel" value="mi Celular"></p> -->
+		</form>  
+	</div>
+	
+
+	<div class="repertorio">
+		<div class="card">
+			<h2 align="center">Camisetas</h2>
+			<div class="contenido">
+				<div class="sup">
+					<img src="Images/Camiseta/Camiseta1.jpg" alt="">
+				</div>
+				<div class="inf">
+					<p>Descripción: Camiseta blanca con la imagen de la tercera entrega del Principe de Persia</p>
+					<p>Precio: 50Bs</p>
+					<p>Camiseta manga corta</p>
+					<p>ENVIO GRATIS</p>
+					<button onclick="item1()">Añadir al carrito</button>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<span><h2>Camiseta</h2></span>
+			<div class="contenido">
+				<div class="sup">
+					<img src="Images/Camiseta/Camiseta2.jpg" alt="">
+				</div>
+				<div class="inf">
+					<p>Descripción: Camiseta blanca con la imagen de la segunda entrega del Principe de Persia</p>
+					<p>Precio: 30Bs</p>
+					<p>Camiseta manga corta</p>
+					<p>ENVIO GRATIS</p>
+					<button onclick="item2()">Añadir al carrito</button>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<span><h2>Camiseta color Plomo</h2></span>
+			<div class="contenido">
+				<div class="sup">
+					<img src="Images/Camiseta/Camiseta6.jpg" alt="">
+				</div>
+				<div class="inf">
+					<p>Descripción: Camiseta con la imagend de la Daga del Tiempo</p>
+					<p>Precio: 80Bs</p>
+					<p>Camiseta manga corta</p>
+					<p>ENVIO GRATIS</p>
+					<button onclick="item3()">Añadir al carrito</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!--########################################################################################################-->
+	<div class="repertorio">
+		<div class="card">
+			<h2 align="center">Camisetas</h2>
+			<div class="contenido">
+				<div class="sup">
+					<img src="Images/Camiseta/Camiseta4.jpg" alt="">
+				</div>
+				<div class="inf">
+					<p>Descripción: Camiseta blanca con la imagen de la tercera entrega del Principe de Persia</p>
+					<p>Precio: 50Bs</p>
+					<p>Camisera manga corta</p>
+					<p>ENVIO GRATIS</p>
+					<button onclick="item1()">Añadir al carrito</button>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<span><h2>Camiseta</h2></span>
+			<div class="contenido">
+				<div class="sup">
+					<img src="Images/Camiseta/Camiseta5.jpg" alt="">
+				</div>
+				<div class="inf">
+					<p>Descripción: </p>
+					<p>Precio: 30Bs</p>
+					<p>Camiseta manga corta</p>
+					<p>ENVIO GRATIS</p>
+					<button onclick="item2()">Añadir al carrito</button>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<span><h2>Chocolate El Ceibo</h2></span>
+			<div class="contenido">
+				<div class="sup">
+					<img src="Images/Camiseta/Camiseta3.jpg" alt="">
+				</div>
+				<div class="inf">
+					<p>Descripción: Chocolate Blanco</p>
+					<p>Precio: 80Bs</p>
+					<p>Camiseta manga corta</p>
+					<p>ENVIO GRATIS</p>
+					<button onclick="item3()">Añadir al carrito</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+<!--########################################################################################################-->
+
+	<div class="carrito">
+		<div class="car">
+			<img src="carrito.jpg" alt="">
+		</div>
+		<div class="contenedor">
+			<h2 align="center">Compras añadidas</h2>
+			<div id="supercarrito">
+				<div id="datoscarrito">
+				
+				</div>
+				<div id="compras">
+					
+				</div>
+				<div id="totalcarrito">
+					
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="superboton">
+		<button onclick="finish()">FINALIZAR COMPRA</button>
+	</div>
+
+	<script>
+		var total=0;
+		var i1=0;
+		var i2=0;
+		var i3=0;
+		function ope() {
+			document.getElementById("compras").innerHTML=""
+			if(i1>0)
+			{
+				document.getElementById("compras").innerHTML+="<p>Chocolate El ceibo</p><p>Cantidad: "+i1+"</p>"
+			}
+			if(i2>0)
+			{
+				document.getElementById("compras").innerHTML+="<p>Chocolate BlancoEl ceibo</p><p>Cantidad: "+i2+"</p>"
+			}
+			if(i3>0)
+			{
+				document.getElementById("compras").innerHTML+="<p>Chocolate El ceibo parte 2</p><p>Cantidad: "+i3+"</p>"
+			}
+		}
+		function item1() {
+			total+=50;
+			document.getElementById("totalcarrito").innerHTML=total;
+			document.getElementById("totalcarrito").innerHTML+="Bs.";
+			i1+=1;
+			ope();
+		}
+		function item2() {
+			total+=30;
+			document.getElementById("totalcarrito").innerHTML=total;
+			document.getElementById("totalcarrito").innerHTML+="Bs.";
+			i2+=1;
+			ope();
+		}
+		function item3() {
+			total+=80;
+			document.getElementById("totalcarrito").innerHTML=total;
+			document.getElementById("totalcarrito").innerHTML+="Bs.";
+			i3+=1;
+			ope();
+		}
+		function finish() {
+			document.getElementById("datoscarrito").innerHTML=""
+			document.getElementById("datoscarrito").innerHTML+="<h2 align='center'>Factura</h2>"
+			document.getElementById("datoscarrito").innerHTML+="<p>Nombre del comprador: </p>"
+			document.getElementById("datoscarrito").innerHTML+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+(document.getElementById("nom").value)
+			document.getElementById("datoscarrito").innerHTML+="<br>"
+			document.getElementById("datoscarrito").innerHTML+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+(document.getElementById("ape").value)
+			document.getElementById("datoscarrito").innerHTML+="<br>"
+			document.getElementById("datoscarrito").innerHTML+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+(document.getElementById("email").value)
+			document.getElementById("datoscarrito").innerHTML+="<br>"
+			document.getElementById("datoscarrito").innerHTML+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+(document.getElementById("cel").value)
+			document.getElementById("datoscarrito").innerHTML+="<br>"
+			document.getElementById("datoscarrito").innerHTML+="<br>"
+			document.getElementById("datoscarrito").innerHTML+="Total de compras"
+		}
+	</script>
+
+</body>
+</html>
