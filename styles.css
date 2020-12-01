@@ -65,7 +65,12 @@ img {
 #superboton {
 	margin: 0 auto;
 	margin-bottom: 3em;
-	width: 130px;
+	width: 400px;
+	height: auto;
+}
+#superboton a {
+	text-decoration: none;
+	color: black;
 }
 
 #datoscarrito, #compras {
