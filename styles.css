@@ -57,12 +57,12 @@ img {
 	border: 2px solid black;
 }
 .contenedor {
-	margin: 20px;
+	margin: 24px;
 	flex-basis: 50%;
 	border: 2px solid black;
 }
 
-#superboton {
+#superboton {	
 	margin: 0 auto;
 	margin-bottom: 3em;
 	width: 400px;
@@ -72,6 +72,7 @@ img {
 	text-decoration: none;
 	color: black;
 }
+#superboton button{font-size: 15px;padding: 15px;float: center;}
 
 #datoscarrito, #compras {
 	font-size: 25px;
@@ -106,5 +107,8 @@ img {
 		width: 90%;
 		border: 2px solid black;
 		display: block;
+	}
+	#superboton{
+		text-align: center;
 	}
 }
